@@ -3,7 +3,49 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="180,126,0,0" VerticalAlignment="Top" Width="109" Height="63" Click="Button_Click"/>
+        <Button x:Name="b1" Content="Button" HorizontalAlignment="Left" Margin="49,36,0,0" VerticalAlignment="Top" Width="109" Height="63" Click="Button_Click"/>
+        <TextBox x:Name="t1" HorizontalAlignment="Left" Height="35" Margin="341,12,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" IsEnabled="False">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.383"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="t2" HorizontalAlignment="Left" Height="35" Margin="339,69,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.383"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="b2" Content="Button" HorizontalAlignment="Left" Margin="344,144,0,0" VerticalAlignment="Top" Width="109" Height="63" Click="Button2_Click"/>
+        <TextBox x:Name="t3" HorizontalAlignment="Left" Height="35" Margin="203,69,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.383"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="t4" HorizontalAlignment="Left" Height="35" Margin="336,249,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.383"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <RadioButton x:Name="r1" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="184,162,0,0" VerticalAlignment="Top" Width="98"/>
 
     </Grid>
 </Window>

@@ -27,7 +27,23 @@ namespace Kalkulaator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("OH NOOOOO!");
+            t1.Text = "test";
+            
         }
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            int pikkus = int.Parse(t2.Text);
+            int laius = int.Parse(t3.Text);
+            int kogus;
+            if (r1.IsChecked == true)
+            {
+                kogus = pikkus * laius;
+                t4.Text = kogus.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Palun valige mida tahate arvutada");
+            }    
+        }        
     }
 }

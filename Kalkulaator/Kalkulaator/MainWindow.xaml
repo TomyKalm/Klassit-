@@ -1,16 +1,11 @@
 ﻿<Window x:Class="Kalkulaator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-<<<<<<< HEAD
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>                                                      
-=======
         Title="Kalkulaator" Height="373" Width="546" Background="#FF0076A2">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="pack://siteoforigin:,,,/wallpaper-1845311.jpg"/>
         </Grid.Background>
->>>>>>> Graafika
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>

@@ -28,21 +28,20 @@ namespace Kalkulaator
             InitializeComponent();
             MessageBox.Show("1. Valige kujund\n2. Sisestage mõõdud\n3.Vajutage ümbermõõt või pindala nuppu.");
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             valitud.Text = "Ristkülik";
             valitudKujund = 1;
             Kõrgus.IsEnabled = false;
             Diameeter.IsEnabled = false;
             Pikkus.IsEnabled = true;
-<<<<<<< HEAD
-            Laius.IsEnabled = true; 
-=======
             Laius.IsEnabled = true;
             Alus.IsEnabled = false;
             Kustuta();
->>>>>>> Graafika
         }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
                        
@@ -159,6 +158,5 @@ namespace Kalkulaator
             PindalaT.Text = "0";
         }
 
-        
     }
 }

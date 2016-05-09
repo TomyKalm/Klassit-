@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button Content="Ristkülik" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="102" Height="64" FontSize="16" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="Kolmnurk" HorizontalAlignment="Left" Height="64" Margin="10,88,0,0" VerticalAlignment="Top" Width="102" FontWeight="Bold" FontSize="16" Click="Button_Click_1"/>
+        <Button Content="Võrdkülgne &#xD;&#xA;Kolmnurk" HorizontalAlignment="Left" Height="64" Margin="10,88,0,0" VerticalAlignment="Top" Width="102" FontWeight="Bold" FontSize="16" Click="Button_Click_1"/>
         <Button Content="Ring" HorizontalAlignment="Left" Height="64" Margin="10,166,0,0" VerticalAlignment="Top" Width="102" FontWeight="Bold" FontSize="16" Click="Button_Click_2"/>
         <Button Content="Ruut" HorizontalAlignment="Left" Height="64" Margin="10,245,0,0" VerticalAlignment="Top" Width="102" FontWeight="Bold" FontSize="16" Click="Button_Click_3"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="262,264,0,55" TextWrapping="Wrap" Text="Pindala tulemus:" VerticalAlignment="Center" Width="180" FontSize="16" FontWeight="Bold" BorderThickness="0" IsEnabled="False" Background="Transparent" BorderBrush="White" SelectionBrush="White" Foreground="White"/>

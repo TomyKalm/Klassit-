@@ -128,7 +128,7 @@ namespace Kalkulaator
             }
             else if (valitudKujund == 2)
             {
-                tulemusP = alus * alus;
+                tulemusP = (alus * kõrgus) / 2;
                 PindalaT.Text = tulemusP.ToString();
             }
             else if (valitudKujund == 3)

@@ -110,18 +110,70 @@ namespace Kalkulaator
             {
                 if (Täisnurkne.IsChecked == true)
                 {
-                    tulemusÜ = alus + kõrgus + muutuv;
-                    ÜmbermõõtT.Text = tulemusÜ.ToString();
+                    if (alus <= 0 || kõrgus <= 0 || muutuv <= 0 || (alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv || (muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus || (muutuv * muutuv) - (kõrgus * kõrgus) != alus * alus)
+                    {
+                        if (alus <= 0 || kõrgus <= 0 || muutuv <= 0)
+                        {
+                            MessageBox.Show("Pange mõõdud kõikitesse kastidesse");
+                        }
+                        else if ((alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades hüpotenuusi " + Math.Sqrt(((alus * alus) + (kõrgus * kõrgus))) +
+                                 "\n või kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))) +
+                                 "\n või alust " + Math.Sqrt(((muutuv * muutuv) - (kõrgus * kõrgus))));
+                        }
+                        else if ((muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))));
+                        }
+                        else if ((muutuv * muutuv) - (kõrgus * kõrgus) != alus * alus)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades alust " + Math.Sqrt(((muutuv * muutuv) - (kõrgus * kõrgus))));
+                        }
+                    }
+                    else 
+                    {
+                        tulemusÜ = alus + kõrgus + muutuv;
+                        ÜmbermõõtT.Text = tulemusÜ.ToString();
+                    }
+                    
                 }
                 else if (Võrdkülgne.IsChecked == true)
                 {
-                    tulemusÜ = alus * 3;
-                    ÜmbermõõtT.Text = tulemusÜ.ToString();
+                    if (alus <= 0)
+                    {
+                        MessageBox.Show("Pange mõõdud aluse kasti");
+                    }
+                    else
+                    {
+                        tulemusÜ = alus * 3;
+                        ÜmbermõõtT.Text = tulemusÜ.ToString();
+                    }
+                    
                 }
                 else if (Võrdhaarne.IsChecked == true)
                 {
-                    tulemusÜ = alus + (muutuv * 2);
-                    ÜmbermõõtT.Text = tulemusÜ.ToString();
+                    if (alus <= 0 || kõrgus <= 0 || muutuv <= 0 || (alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv || (muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus)
+                    {
+                        if (alus <= 0 || muutuv <= 0)
+                        {
+                            MessageBox.Show("Pange mõõdud aluse ja haara kasti");
+                        }
+                        else if ((alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades hüpotenuusi " + Math.Sqrt(((alus * alus) + (kõrgus * kõrgus))) +
+                                 "\n või kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))));                                                             
+                        }
+                        else if ((muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))));
+                        }
+                    }
+                    else
+                    {
+                        tulemusÜ = alus + (muutuv * 2);
+                        ÜmbermõõtT.Text = tulemusÜ.ToString();
+                    }                    
                 }
 
             }
@@ -159,18 +211,70 @@ namespace Kalkulaator
             {
                 if (Täisnurkne.IsChecked == true)
                 {
-                    tulemusP = (alus * kõrgus) / 2;
-                    PindalaT.Text = tulemusP.ToString();
+                    if (alus <= 0 || kõrgus <= 0 || muutuv <= 0 || (alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv || (muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus || (muutuv * muutuv) - (kõrgus * kõrgus) != alus * alus)
+                    {
+                        if (alus <= 0 || kõrgus <= 0 || muutuv <= 0)
+                        {
+                            MessageBox.Show("Pange mõõdud kõikitesse kastidesse");
+                        }
+                        else if ((alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades hüpotenuusi " + Math.Sqrt(((alus * alus) + (kõrgus * kõrgus))) +
+                                 "\n või kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))) +
+                                 "\n või alust " + Math.Sqrt(((muutuv * muutuv) - (kõrgus * kõrgus))));
+                        }
+                        else if ((muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))));
+                        }
+                        else if ((muutuv * muutuv) - (kõrgus * kõrgus) != alus * alus)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades alust " + Math.Sqrt(((muutuv * muutuv) - (kõrgus * kõrgus))));
+                        }
+                    }
+                    else 
+                    {
+                        tulemusP = (alus * kõrgus) / 2;
+                        PindalaT.Text = tulemusP.ToString();
+                    }                    
                 }
                 else if (Võrdkülgne.IsChecked == true)
                 {
-                    tulemusP = (alus * kõrgus) / 2;
-                    PindalaT.Text = tulemusP.ToString();
+                    if (alus <= 0)
+                    {
+                        MessageBox.Show("Pange mõõdud aluse kasti");
+                    }
+                    else
+                    {
+                        tulemusP = (alus * kõrgus) / 2;
+                        PindalaT.Text = tulemusP.ToString();
+                    }
+                    
                 }
                 else if (Võrdhaarne.IsChecked == true)
                 {
-                    tulemusP = (alus * kõrgus) / 2;
-                    PindalaT.Text = tulemusP.ToString();
+                    if (alus <= 0 || kõrgus <= 0 || muutuv <= 0 || (alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv || (muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus)
+                    {
+                        if (alus <= 0 || muutuv <= 0)
+                        {
+                            MessageBox.Show("Pange mõõdud aluse ja haara kasti");
+                        }
+                        else if ((alus * alus) + (kõrgus * kõrgus) != muutuv * muutuv)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades hüpotenuusi " + Math.Sqrt(((alus * alus) + (kõrgus * kõrgus))) +
+                                 "\n või kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))));                            
+                        }
+                        else if ((muutuv * muutuv) - (alus * alus) != kõrgus * kõrgus)
+                        {
+                            MessageBox.Show("Sellist kujundit ei ole võimalik teha\n Võimalik on kasutades kõrgust " + Math.Sqrt(((muutuv * muutuv) - (alus * alus))));
+                        }
+                    }
+                    else
+                    {
+                        tulemusP = (alus * kõrgus) / 2;
+                        PindalaT.Text = tulemusP.ToString();
+                    } 
+                    
                 }
             }
             else if (valitudKujund == 3)

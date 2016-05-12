@@ -26,6 +26,7 @@ namespace Kalkulaator
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("1. Valige kujund\n2. Sisestage mõõdud\n3.Vajutage ümbermõõt või pindala nuppu.");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -36,7 +37,9 @@ namespace Kalkulaator
             Kõrgus.IsEnabled = false;
             Diameeter.IsEnabled = false;
             Pikkus.IsEnabled = true;
-            Laius.IsEnabled = true;            
+            Laius.IsEnabled = true;
+            Alus.IsEnabled = false;
+            Kustuta();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -47,7 +50,9 @@ namespace Kalkulaator
             Pikkus.IsEnabled = false;
             Diameeter.IsEnabled = false;
             Kõrgus.IsEnabled = true;
-            Laius.IsEnabled = true; 
+            Laius.IsEnabled = false;
+            Alus.IsEnabled = true;
+            Kustuta();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -59,7 +64,8 @@ namespace Kalkulaator
             Laius.IsEnabled = false;
             Kõrgus.IsEnabled = false;
             Diameeter.IsEnabled = true;
-            
+            Alus.IsEnabled = false;
+            Kustuta();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -70,23 +76,26 @@ namespace Kalkulaator
             Laius.IsEnabled = false;
             Kõrgus.IsEnabled = false;
             Pikkus.IsEnabled = true;
+            Alus.IsEnabled = false;
+            Kustuta();
             
         }        
-        private void CheckBox1_Checked(object sender, RoutedEventArgs e)
+        private void Ümbermõõt_Click(object sender, RoutedEventArgs e)
         {
-
             double pikkus = double.Parse(Pikkus.Text);
             double laius = double.Parse(Laius.Text);
             double kõrgus = double.Parse(Kõrgus.Text);
             double diameeter = double.Parse(Diameeter.Text);
+            double alus = double.Parse(Alus.Text);
             if (valitudKujund == 1)
             {
                 tulemusÜ = (pikkus + laius) * 2;
-                ÜmbermõõtT.Text = tulemusÜ.ToString(); 
+                ÜmbermõõtT.Text = tulemusÜ.ToString();
             }
             else if (valitudKujund == 2)
             {
-
+                tulemusÜ = alus * 3;
+                ÜmbermõõtT.Text = tulemusÜ.ToString();
             }
             else if (valitudKujund == 3)
             {
@@ -101,14 +110,16 @@ namespace Kalkulaator
             else
             {
                 MessageBox.Show("Palun valige kujund");
+
             }
         }
 
-        private void CheckBox2_Checked(object sender, RoutedEventArgs e)
+        private void Pindala_Click(object sender, RoutedEventArgs e)
         {
             double pikkus = double.Parse(Pikkus.Text);
             double laius = double.Parse(Laius.Text);
             double kõrgus = double.Parse(Kõrgus.Text);
+            double alus = double.Parse(Alus.Text);
             double diameeter = double.Parse(Diameeter.Text);
             if (valitudKujund == 1)
             {
@@ -117,7 +128,8 @@ namespace Kalkulaator
             }
             else if (valitudKujund == 2)
             {
-
+                tulemusP = (alus * kõrgus) / 2;
+                PindalaT.Text = tulemusP.ToString();
             }
             else if (valitudKujund == 3)
             {
@@ -132,7 +144,18 @@ namespace Kalkulaator
             else
             {
                 MessageBox.Show("Palun valige kujund");
+
             }
+        }
+        private void Kustuta()
+        {
+            Pikkus.Text = "0";
+            Laius.Text = "0";
+            Kõrgus.Text = "0";
+            Diameeter.Text = "0";
+            Alus.Text = "0";
+            ÜmbermõõtT.Text = "0";
+            PindalaT.Text = "0";
         }
 
     }

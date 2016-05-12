@@ -44,7 +44,9 @@ namespace Kalkulaator
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-                       
+            this.Täisnurkne.Visibility = Visibility.Visible;
+            this.Võrdkülgne.Visibility = Visibility.Visible;
+            this.Võrdhaarne.Visibility = Visibility.Visible;    
             valitud.Text = "Kolmnurk";
             valitudKujund = 2;
             Pikkus.IsEnabled = false;
@@ -157,6 +159,5 @@ namespace Kalkulaator
             ÜmbermõõtT.Text = "0";
             PindalaT.Text = "0";
         }
-
     }
 }
